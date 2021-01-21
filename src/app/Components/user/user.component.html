@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="inner_user_block">
+        <div class="search_block" >
+            <input type="search" placeholder="Search..."   [(ngModel)]='username'  name="username" (keydown.enter)='searchUser()'>
+            <!-- <button  class="search_btn" type="button" (click)="searchUser()">
+               Search
+            </button> -->
+        </div>
+       <div class="error" *ngIf="this.UserService.error">
+           <p>{{this.UserService.message}}</p>
+       </div>
+      
+        <div class="list_of_users" >
+            <div class="inner_list_of_users" *ngFor="let user of userCount$ | async">
+                <div class="content_card_user" routerLink="/{{user.login}}">
+                <div class = "img_user">
+                    <img src="{{user.avatar_url}}">
+                </div>
+                <p>{{user.login | titlecase}}</p>
+             </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

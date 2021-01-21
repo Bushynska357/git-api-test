@@ -1,0 +1,74 @@
+.repo_card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .header_repo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        .title_user{
+            margin: 15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .favourite_repos{
+            border-radius: 10px;
+            outline: none;
+            padding: 10px;
+            margin: 10px;
+            background: transparent;
+        }
+    }
+   
+    .inner_repo_card{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 15px;
+        line-height: 30px;
+        .text_card_repo{
+            width: 70%;
+            p{
+                cursor: pointer;
+            }
+        }
+       
+        .icons{
+            button{
+                background: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                margin: 5px;
+                
+                    svg {
+                        fill:#fff;
+                        stroke: black;
+                      
+                       path{
+                           &.active{
+                            fill: coral;
+                        }
+                    }  
+                }
+                       
+            }      
+           
+        }
+    }
+}
+
+// media
+
+@media screen and (max-width: 490px) {
+    .inner_repo_card{
+        .icons{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

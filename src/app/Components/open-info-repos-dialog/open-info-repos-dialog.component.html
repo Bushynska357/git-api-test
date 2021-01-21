@@ -1,0 +1,10 @@
+<p>Name of repository: {{data.name}}</p>
+<p>Programming language: {{data.language}}</p>
+<div class="issues">
+    <b>Issues</b>
+    <img src="../../../assets/img/check.png" *ngIf="data?.has_issues"/>
+    <img src="../../../assets/img/cross.png" *ngIf="!data?.has_issues"/>
+</div>
+<button class="close" mat-button mat-dialog-close>Close</button>
+
+

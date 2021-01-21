@@ -1,0 +1,18 @@
+.issues{
+    display: flex;
+    align-items: center;
+    img{
+        width: 15px;
+        height: 15px;
+        margin-left:10px;
+    }
+}
+button{
+    background: transparent;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border:1px solid #32971D;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
